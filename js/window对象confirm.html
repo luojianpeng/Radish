@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<button onClick="dw()">点我</button>
+<p id="txt"></p>
+</body>
+<script>
+	var b;
+function dw(){
+	var a=window.confirm("选择按钮");
+	if(a==true){
+		b="你点了确定";
+		}
+		else
+		{
+		b="你点了取消";
+			}
+		document.getElementById("txt").innerHTML=b;
+	}
+</script>
+</html>

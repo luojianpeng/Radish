@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<script>
+	function m(){
+	var a = document.getElementById("name").value;
+	var b = document.getElementById("eml").value;
+	var i = a.lastIndexOf('.');
+	var wen = false;
+	var you = false;
+ 	 if(i!=-1 && i!= 0 && a.substring(i)==".html"){
+			wen = true;
+ 	 }
+		  else {
+		  alert("文件名输入有误")
+	  }
+	  if(b.indexOf("@")!=-1&&b.indexOf(".")!=-1&&b.indexOf(".")>b.indexOf("@")){
+		  you = true;
+		  }
+		  else{
+	  alert("你输入的邮箱不正确")
+		  }
+		  
+		  if(wen==true&&you==true){
+			  alert("恭喜你提交成功")
+			  }
+			   else{
+	  alert("作业提交失败")
+			   }
+}
+</script>
+<body>
+<form>
+文件名：<input type="text" id="name">
+邮箱：<input type="email" id="eml">
+<input type="button" value="作业提交" onclick="m()">
+</form>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<script>
+ 	var date = new Date();
+	var month = date.getMonth();
+	var strA;
+	switch(month+1){
+		case 1:
+		strA="一月";
+		break;
+		case 2:
+		strA=" 二月";
+		break;
+		case 3:
+		strA="三月";
+		break;
+		case 4:
+		strA="四月";
+		break;
+		case 5:
+		strA="五月";
+		break;
+		case 6:
+		strA="六月";
+		break;
+		case 7:
+		strA="七月";
+		break;
+		case 8:
+		strA="八月";
+		break;
+		case 9:
+		strA="九月";
+		break;
+		case 10:
+		strMonth="十月";
+		break;
+		case 11:
+		strA="十一月";
+		break;
+		case 12:
+		strA="十二月";
+		break;
+		default:
+		break;
+	}
+	var day = date.getDay();
+	var S;
+	switch(day){
+		case 1:
+		S="星期一";
+		break;
+		case 2:
+		S="星期二";
+		break;
+		case 3:
+		S="星期三";
+		break;
+		case 4:
+		S="星期四";
+		break;
+		case 5:
+		S="星期五";
+		break;
+		case 6:
+		S="星期六";
+		break;
+		case 0:
+		S="星期天";
+		break;
+		default:
+		break;
+	}
+	 	document.write(date.getFullYear()+"年"+strA + date.getDate()+"日"+" "+ S);
+</script>
+</body>
+</html>

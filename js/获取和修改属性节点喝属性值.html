@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script>
+    var _radio=document.getElementsByTagName("input");
+    //var _image=document.getElementById("image");在函数外写的 javascript 会在页面初始化值钱调用,  页面未初始化时 自然没有 id
+    function btn(){
+        var _image=document.getElementById("image");
+        if(_radio[0].checked){
+            _image.setAttribute("src","../img/1.jpg");
+            _image.nextElementSibling.innerHTML="这是第一张图片";
+        }
+        else if(_radio[1].checked){
+            _image.setAttribute("src","../img/2.jpg");
+            _image.nextElementSibling.innerHTML="这是第二张图片";
+        }
+    }
+</script>
+</head>
+<body>
+请选择书籍：
+<input type="radio" name="book" onclick="btn()">1
+<input type="radio" name="book" onclick="btn()">2
+<div>
+    <img src="" id="image" onclick="">
+    <span></span>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script>
+    var data= new Date();
+    var b=["星期天","星期一","星期二","星期三","星期四","星期五","星期六"];
+    document.write(data.getFullYear()+"年"+data.getMonth()+"月"+data.getDate()+"日"+" "+b[data.getDay()]+"<br>");
+
+    var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+    //var strs=new Array();
+    str = scoreStr.split(";");//把字符串按“；”分割成数组。
+    var sum=0;
+    for(var i=0;i<str.length;i++){
+        sum=sum+parseInt(str[i].slice(3,5));//把数组中3到4个元素选取出来；parseInt把字符串转换成整数；
+    }
+    avg=sum/str.length;
+    document.write("平均数是"+parseInt(avg));
+</script>
+</head>
+<body>
+
+</body>
+</html>

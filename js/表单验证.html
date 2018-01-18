@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+         p{
+            display:inline-block;
+        }
+      /*  div{
+            display: inline-block;
+        }*/
+        input{
+            margin-left: 90px;
+        }
+    </style>
+</head>
+<body>
+<form action="log.html">
+    <div>
+        <span>用户名：</span>
+        <input type="text" id="use">
+        <p>请输入用户名</p>
+    </div>
+
+    <div>
+        <span>密码：</span>
+        <input type="password" id="psw">
+        <p>请输入6--12个字符</p>
+    </div>
+
+    <div>
+        <span>确认密码：</span>
+        <input type="password" id="psw2">
+        <p>再次输入密码</p>
+    </div>
+
+</form>
+<script>
+    var use=document.getElementById("use");
+    var myp=document.getElementsByTagName("p")
+    use.onfocus= function () {
+
+        //alert("1")
+    }
+    use.onblur=function(){
+        //alert("2")
+        var reg=/^[\w\u4e00-\u9fa5]{6,12}$/
+        if(use.value==""){
+            myp[0].innerHTML="不能为空";
+        }
+        else if(!reg.test(use.value)){
+            myp[0].innerHTML="您输入的用户名长度不对或存在非法字符";
+        }
+        else {
+            myp[0].innerHTML="输入正确";
+        }
+    }
+</script>
+</body>
+</html>

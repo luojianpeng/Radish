@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>幸运抽奖</title>
+    <style>
+        /*CSS代码：美化样式*/
+        *{
+            padding:0;
+            margin:0;
+        }
+        .login-box{
+            width:500px;
+            height:430px;
+            /*border:1px solid red;*/
+            margin:100px auto;
+           /*background: url(image/tx1.png) no-repeat;*/
+            box-shadow: 0 0 2px rgba(0,0,0,.5);
+        }
+        .login{
+            padding:5px;
+            border:none;
+            background: #0a88e1;
+            color:white;
+            font-size:12px;
+            line-height: 20px;
+            width:220px;
+            text-align: center;
+            margin-top:200px;
+            margin-left:120px;
+        }
+    </style>
+</head>
+<body>
+<!--HTML代码：标签，组织页面内容-->
+    <div class="login-box">
+        <input type="button" value="点击开始抽奖" class="login" onclick="luck()" id="luckbtn"/>
+    </div>
+</body>
+<script>
+//document.getElementById("luckbtn").value;
+function luck(){
+        var num = parseInt(Math.random()*10);
+		if(num==8){
+			alert("恭喜你中一等奖啦");}
+			else if(num==2||num==6){
+				alert("恭喜你中二等奖拉");
+			}else{
+				alert("再接再厉");
+			}
+				}
+</script>
+</html>

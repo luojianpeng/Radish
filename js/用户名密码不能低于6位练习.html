@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<script>
+function m() {
+	var a=document.getElementById("psw").value;
+	
+	if(a.length==0){
+		alert("你输入的密码不能为空");
+		}
+		else if(a.length<6){
+			alert("你输入的密码不能低于6位数");
+			}
+			else{
+				alert("注册成功");
+				}
+	}
+</script>
+<body>
+<form>
+用户名：<input type="text" value="admin">
+密码：<input type="password" id="psw">
+<input type="button" value="注册" onclick="m()">
+</form>
+</body>
+</html>

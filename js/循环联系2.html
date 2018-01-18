@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+</body>
+<script>
+	var a=prompt("要输入几个人的成绩");
+	var c=0;
+	for (i=1;i<=a;i++){
+		var b=prompt("请输入第"+i+"个人的成绩");
+		if(b>=80){
+			  c++;
+			document.write("80以上的人数有："+c+"人"+"<br>");
+			}
+			else if(b<0){
+				document.write("你输入成绩有误，退出输入。"+"<br>");
+				break;			
+			}
+		}
+</script>
+</html>

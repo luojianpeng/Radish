@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function btn(){
+            var _radio=document.getElementsByTagName("input");
+            var _div=document.getElementsByTagName("div")[0];
+            if(_radio[0].checked){
+                //alert("1");
+                var _img=document.createElement("img");
+                _img.setAttribute("src","../img/2.jpg");
+                _div.appendChild(_img);
+                var _p=document.createElement("p");
+                var text=document.createTextNode("第一张图片");
+                _p.appendChild(text);
+                _div.appendChild(_p);
+            }
+            else if(_radio[1].checked){
+                //alert("2")
+                var _img=document.createElement("img");
+                _img.setAttribute("src","../img/1.jpg");
+                _div.appendChild(_img);
+                var _p=document.createElement("p");
+                var text=document.createTextNode("第二张图片");
+                _p.appendChild(text);
+                _div.appendChild(_p);
+            }
+        }
+    </script>
+</head>
+<body>
+请选择书籍：
+<input type="radio" name="book" onclick="btn()">添加图片1
+<input type="radio" name="book" onclick="btn()">添加图片2
+<div></div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin:0;padding:0;}
+.huabian{
+	width:690px;
+	height:323px;
+	border:15px solid #960;
+	padding:20px 80px;
+	margin:0px auto 40px;
+	background:#FF3
+}
+
+.huabian img{
+	border:2px #F0F solid ;
+	}
+	
